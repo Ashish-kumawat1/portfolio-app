@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashish Kumawat — Web Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
+</head>
+<body>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <main class="main">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="/assest/my-avatar.png" alt="Ashish Kumawat" width="80" />
+        </figure>
+        <div class="info-content">
+          <h1 class="name">Ashish Kumawat</h1>
+          <p class="title">Aspiring Full-Stack Developer</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:kumawatashish842@gmail.com" class="contact-link" style="font-size: 10px">kumawatashish842@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+919785247940" class="contact-link">+91 9785247940</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Jaipur, Rajasthan</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item"><a href="https://github.com/Ashish-kumawat1" class="social-link" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a></li>
+          <li class="social-item"><a href="https://www.instagram.com/aashishkumawatt" class="social-link" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li class="social-item"><a href="https://www.linkedin.com/in/ashish-kumawat-35b577304" class="social-link" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="main-content">
+
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><button class="navbar-link active" data-nav-link data-page="about">About</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-page="resume">Resume</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-page="portfolio">Projects</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-page="contact">Contact</button></li>
+        </ul>
+      </nav>
+
+      <!-- ABOUT -->
+      <article class="about active" data-page="about">
+        <header><h2 class="h2 article-title">About me</h2></header>
+        <section class="about-text">
+          <p>I am an aspiring full-stack developer and BCA graduate from Rajasthan, focused on building modern, responsive, and user-friendly web applications. I enjoy turning ideas into clean, intuitive digital experiences using HTML, CSS, JavaScript, React, and Node.js.</p>
+          <p>My experience includes developing productivity tools, API-powered applications, and interactive React interfaces. I am eager to apply my knowledge of REST APIs, databases, and user authentication while continuing to learn and contribute to innovative software projects.</p>
+        </section>
+
+        <section class="service">
+          <h3 class="h3 service-title">What I'm doing</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box"><ion-icon name="desktop-outline"></ion-icon></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Design</h4>
+                <p class="service-item-text">Clean, responsive interfaces designed for a clear and engaging user experience.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box"><ion-icon name="code-slash-outline"></ion-icon></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Full-Stack Development</h4>
+                <p class="service-item-text">Dynamic web applications built with modern frontend and backend technologies.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">React Applications</h4>
+                <p class="service-item-text">Interactive React interfaces with reusable components and smooth functionality.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box"><ion-icon name="camera-outline"></ion-icon></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">API Integration</h4>
+                <p class="service-item-text">Reliable REST API integration for real-time data and connected experiences.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- <section class="testimonials">
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+          <ul class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="https://i.pravatar.cc/60?img=1" alt="Daniel" width="60" />
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel Lewis</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.</p>
+                </div>
+              </div>
+            </li>
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="https://i.pravatar.cc/60?img=5" alt="Jessica" width="60" />
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica Miller</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.</p>
+                </div>
+              </div>
+            </li>
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="https://i.pravatar.cc/60?img=9" alt="Emily" width="60" />
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily Evans</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.</p>
+                </div>
+              </div>
+            </li>
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="https://i.pravatar.cc/60?img=3" alt="Henry" width="60" />
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry William</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="clients">
+          <h3 class="h3 clients-title">Clients</h3>
+          <ul class="clients-list has-scrollbar">
+            <li class="clients-item"><a href="#"><img src="https://via.placeholder.com/100x50/333/fff?text=Logo1" alt="client logo" /></a></li>
+            <li class="clients-item"><a href="#"><img src="https://via.placeholder.com/100x50/333/fff?text=Logo2" alt="client logo" /></a></li>
+            <li class="clients-item"><a href="#"><img src="https://via.placeholder.com/100x50/333/fff?text=Logo3" alt="client logo" /></a></li>
+            <li class="clients-item"><a href="#"><img src="https://via.placeholder.com/100x50/333/fff?text=Logo4" alt="client logo" /></a></li>
+          </ul>
+        </section> -->
+      </article>
+
+      <!-- RESUME -->
+      <article class="resume" data-page="resume">
+        <header><h2 class="h2 article-title">Resume</h2></header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Bachelor of Computer Applications (BCA)</h4>
+              <span>University of Rajasthan | Aug 2023 — Jul 2026</span>
+              <p class="timeline-text">Graduated with a GPA of 7.2/10, building a foundation in programming, databases, web development, and software engineering.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Senior Secondary Education (PCM)</h4>
+              <span>Senior Secondary Education Rajasthan | Jul 2023</span>
+              <p class="timeline-text">Completed higher secondary education with Physics, Chemistry, and Mathematics, scoring 61%.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
+            <h3 class="h3">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Full-Stack Development Projects</h4>
+              <span>2025 — Present</span>
+              <p class="timeline-text">Developing responsive web applications with JavaScript, React, Node.js, REST APIs, and databases including MongoDB and MySQL.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="ribbon-outline"></ion-icon></div>
+            <h3 class="h3">Certifications</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Full Stack Developer</h4>
+              <span>Skillsoft Digital Badge</span>
+              <p class="timeline-text">Professional certification demonstrating full-stack development knowledge and practical software development skills.</p>
+              <a class="timeline-link" href="https://skillsoft.digitalbadges.skillsoft.com/0eaf578d-d539-44cd-841f-11935c0ab6e0#acc.H7fElCGg" target="_blank" rel="noopener noreferrer">View certificate</a>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">GenAI Powered Data Analytics Job Simulation</h4>
+              <span>Forage | August 29, 2025</span>
+              <p class="timeline-text">Completed practical tasks in exploratory data analysis, risk profiling, AI-based delinquency prediction, data storytelling, and AI-driven collections strategy.</p>
+              <a class="timeline-link" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_68b1bb3e457ff98b460f16fb_1756482508574_completion_certificate.pdf" target="_blank" rel="noopener noreferrer">View certificate</a>
+            </li>
+          </ol>
+        </section>
+
+        <section class="skill">
+          <h3 class="h3 skills-title">My skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Programming Languages</h5></div>
+              <p class="skill-tags">HTML, CSS, JavaScript</p>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Frameworks and Libraries</h5></div>
+              <p class="skill-tags">React JS, Node.js, MongoDB, MySQL, Tailwind CSS, Bootstrap 5, Express.js</p>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Version Control and Tools</h5></div>
+              <p class="skill-tags">Git, GitHub, Visual Studio Code</p>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- PORTFOLIO -->
+      <article class="portfolio" data-page="portfolio">
+        <header><h2 class="h2 article-title">Portfolio</h2></header>
+        <section class="projects">
+          <ul class="filter-list">
+            <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+            <li class="filter-item"><button data-filter-btn>Web design</button></li>
+            <li class="filter-item"><button data-filter-btn>Applications</button></li>
+            <li class="filter-item"><button data-filter-btn>Web development</button></li>
+          </ul>
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item"><button data-select-item>All</button></li>
+              <li class="select-item"><button data-select-item>Web design</button></li>
+              <li class="select-item"><button data-select-item>Applications</button></li>
+              <li class="select-item"><button data-select-item>Web development</button></li>
+            </ul>
+          </div>
+
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Ashish-kumawat1/first-projects/tree/main/Task%20Management" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="https://via.placeholder.com/400x300/333/fff?text=Task+Management" alt="Task Management application" loading="lazy" />
+                </figure>
+                <h3 class="project-title">Task Management</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">A productivity application for creating, organizing, prioritizing, and tracking tasks.</p>
+                <p class="project-tech">JavaScript, HTML, CSS</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Ashish-kumawat1/first-projects/tree/main/Weather%20Dashboard" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="https://via.placeholder.com/400x300/333/fff?text=Weather+Dashboard" alt="Weather Dashboard application" loading="lazy" />
+                </figure>
+                <h3 class="project-title">Weather Dashboard</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">A responsive weather application with current conditions and forecasts powered by the OpenWeather API.</p>
+                <p class="project-tech">JavaScript, OpenWeather API, CSS</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://github.com/Ashish-kumawat1/ochi" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="https://via.placeholder.com/400x300/333/fff?text=Ochi+React" alt="Ochi React interface project" loading="lazy" />
+                </figure>
+                <h3 class="project-title">Ochi React Interface</h3>
+                <p class="project-category">Web development</p>
+                <p class="project-description">A modern interactive interface built with React and Vite, featuring responsive layouts and animated interactions.</p>
+                <p class="project-tech">React, JavaScript, Vite</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Ashish-kumawat1/quiz-site1" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="https://via.placeholder.com/400x300/333/fff?text=Quiz+Site" alt="JavaScript quiz site" loading="lazy" />
+                </figure>
+                <h3 class="project-title">Quiz Site</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">A browser-based quiz application with timed questions and an interactive user experience.</p>
+                <p class="project-tech">JavaScript, HTML, CSS</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://github.com/Ashish-kumawat1/portfolio-by-microsoft-temple" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="https://via.placeholder.com/400x300/333/fff?text=React+Portfolio" alt="React portfolio template" loading="lazy" />
+                </figure>
+                <h3 class="project-title">React Portfolio Template</h3>
+                <p class="project-category">Web development</p>
+                <p class="project-description">A React-based portfolio web application template designed for customization and deployment.</p>
+                <p class="project-tech">React, JavaScript, Parcel</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- BLOG -->
+      <article class="blog" data-page="blog" hidden>
+        <header><h2 class="h2 article-title">Blog</h2></header>
+        <section class="blog-posts">
+          <ul class="blog-posts-list">
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="https://via.placeholder.com/400x250/333/fff?text=Blog+1" alt="blog" loading="lazy" />
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta"><p class="blog-category">Design</p><span class="dot"></span><time>Feb 23, 2026</time></div>
+                  <h3 class="h3 blog-item-title">Design conferences in 2026</h3>
+                  <p class="blog-text">Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="https://via.placeholder.com/400x250/333/fff?text=Blog+2" alt="blog" loading="lazy" />
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta"><p class="blog-category">Design</p><span class="dot"></span><time>Feb 20, 2026</time></div>
+                  <h3 class="h3 blog-item-title">Best fonts every designer should own</h3>
+                  <p class="blog-text">Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- CONTACT -->
+      <article class="contact" data-page="contact">
+        <header><h2 class="h2 article-title">Contact</h2></header>
+        <section class="mapbox">
+          <figure>
+            <iframe src="https://www.google.com/maps?q=Uniara,+Tonk,+Rajasthan&output=embed"
+              width="400" height="300" loading="lazy" title="Uniara, Tonk, Rajasthan Map"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form action="#" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required />
+              <input type="email" name="email" class="form-input" placeholder="Email address" required />
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+            <button class="form-btn" type="submit" disabled>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+      </article>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
