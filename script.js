@@ -106,8 +106,8 @@ selectItems.forEach((item) => {
 
 /* ===== CONTACT FORM VALIDATION ===== */
 const form = document.querySelector('[data-form]');
-const formInputs = document.querySelectorAll('[data-form-input]');
-const formBtn = document.querySelector('[data-form-btn]');
+const formInputs = form ? form.querySelectorAll('[data-form-input]') : [];
+const formBtn = form ? form.querySelector('[data-form-btn]') : null;
 
 if (form) {
   formInputs.forEach((input) => {

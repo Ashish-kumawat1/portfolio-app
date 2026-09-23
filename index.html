@@ -72,7 +72,7 @@
         <ul class="navbar-list">
           <li class="navbar-item"><button class="navbar-link active" data-nav-link data-page="about">About</button></li>
           <li class="navbar-item"><button class="navbar-link" data-nav-link data-page="resume">Resume</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link data-page="portfolio">Projects</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-page="portfolio">Portfolio</button></li>
           <li class="navbar-item"><button class="navbar-link" data-nav-link data-page="contact">Contact</button></li>
         </ul>
       </nav>
@@ -390,13 +390,17 @@
 
         <section class="contact-form">
           <h3 class="h3 form-title">Contact Form</h3>
-          <form action="#" class="form" data-form>
+          <form action="https://formsubmit.co/kumawatashish842@gmail.com" method="POST" class="form" data-form>
+            <input type="hidden" name="_subject" value="New portfolio contact message" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://ashishkumawat-portfolio.netlify.app/" />
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required />
-              <input type="email" name="email" class="form-input" placeholder="Email address" required />
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" data-form-input required />
+              <input type="email" name="email" class="form-input" placeholder="Email address" data-form-input required />
             </div>
-            <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
-            <button class="form-btn" type="submit" disabled>
+            <textarea name="message" class="form-input" placeholder="Your Message" data-form-input required></textarea>
+            <button class="form-btn" type="submit" data-form-btn disabled>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>

@@ -2,7 +2,7 @@ ye # Ashish Kumawat - Personal Portfolio
 
 A responsive personal portfolio website for Ashish Kumawat, an aspiring full-stack developer and BCA graduate. The site presents professional information, education, certifications, technical skills, projects, and contact details in a clean dark interface.
 
-![Portfolio screenshot](assest/portfolio-screenshot.png)
+![Portfolio screenshot](assest/portfolio-desktop.png)
 
 ## Portfolio Preview
 
