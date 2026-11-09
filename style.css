@@ -335,6 +335,9 @@ textarea.form-input { resize: vertical; min-height: 130px; }
 }
 .form-btn:hover:not(:disabled) { background: var(--accent); color: #121212; }
 .form-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.form-status { min-height: 1.5em; margin-top: 12px; font-size: 0.85rem; }
+.form-status.success { color: #7ee787; }
+.form-status.error { color: #ff8a8a; }
 
 /* ===== SCROLLBAR ===== */
 .has-scrollbar {

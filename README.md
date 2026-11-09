@@ -46,7 +46,16 @@ A responsive personal portfolio website for Ashish Kumawat, an aspiring full-sta
 2. Open the project folder.
 3. Open `index.html` in a browser.
 
-No build step or package installation is required.
+No build step or package installation is required. The contact form uses EmailJS.
+
+### EmailJS configuration
+
+This is a static HTML project, so browsers cannot load `.env` files automatically.
+Copy `.env.example` to `.env` for local reference, then copy those three values into
+the `data-emailjs-public-key`, `data-emailjs-service-id`, and
+`data-emailjs-template-id` attributes on the contact form in `index.html`.
+EmailJS public/service/template identifiers are client-side configuration values;
+never put a private server-side secret in this file.
 
 ## Contact
 

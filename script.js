@@ -108,16 +108,80 @@ selectItems.forEach((item) => {
 const form = document.querySelector('[data-form]');
 const formInputs = form ? form.querySelectorAll('[data-form-input]') : [];
 const formBtn = form ? form.querySelector('[data-form-btn]') : null;
+const formBtnText = form ? form.querySelector('[data-form-btn-text]') : null;
+const formStatus = form ? form.querySelector('[data-form-status]') : null;
 
 if (form) {
   formInputs.forEach((input) => {
     input.addEventListener('input', () => {
-      if (form.checkValidity()) {
+      if (form.checkValidity() && formBtn) {
         formBtn.removeAttribute('disabled');
-      } else {
+      } else if (formBtn) {
         formBtn.setAttribute('disabled', '');
       }
     });
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if (!form.checkValidity() || !formBtn || !window.emailjs) {
+      if (formStatus) {
+        formStatus.textContent = 'Please complete the form and try again.';
+        formStatus.classList.add('error');
+      }
+      return;
+    }
+
+    const publicKey = form.dataset.emailjsPublicKey;
+    const serviceId = form.dataset.emailjsServiceId;
+    const templateId = form.dataset.emailjsTemplateId;
+
+    if (
+      !publicKey ||
+      !serviceId ||
+      !templateId ||
+      publicKey === 'YOUR_PUBLIC_KEY' ||
+      serviceId === 'YOUR_SERVICE_ID' ||
+      templateId === 'YOUR_TEMPLATE_ID'
+    ) {
+      if (formStatus) {
+        formStatus.textContent = 'Email service is not configured yet.';
+        formStatus.classList.add('error');
+      }
+      return;
+    }
+
+    formBtn.setAttribute('disabled', '');
+    if (formBtnText) formBtnText.textContent = 'Sending...';
+    if (formStatus) {
+      formStatus.textContent = '';
+      formStatus.classList.remove('error', 'success');
+    }
+
+    window.emailjs.init({ publicKey });
+    window.emailjs
+      .sendForm(serviceId, templateId, form)
+      .then(() => {
+        form.reset();
+        if (formStatus) {
+          formStatus.textContent = 'Message sent successfully.';
+          formStatus.classList.add('success');
+        }
+      })
+      .catch((error) => {
+        console.error('EmailJS failed to send the message:', error);
+        if (formStatus) {
+          formStatus.textContent = 'Message could not be sent. Please try again.';
+          formStatus.classList.add('error');
+        }
+      })
+      .finally(() => {
+        if (formBtnText) formBtnText.textContent = 'Send Message';
+        if (form.checkValidity()) {
+          formBtn.removeAttribute('disabled');
+        }
+      });
   });
 }
 
